@@ -9,7 +9,6 @@
     "test:integration": "mocha --timeout 25000 test/integration/",
     "lint": "standard --env mocha --fix",
     "docs": "./node_modules/.bin/apidoc -i src/ -o docs",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "coverage:report": "nyc --reporter=html mocha test/unit/ --exit"
   },
   "keywords": [
@@ -33,25 +32,18 @@
   },
   "repository": "christroutner/npm-lib-boilerplate",
   "dependencies": {
-    "@psf/bch-js": "4.20.21",
-    "apidoc": "0.25.0"
+    "@psf/bch-js": "6.4.5"
   },
   "devDependencies": {
-    "chai": "4.2.0",
-    "coveralls": "3.1.0",
-    "eslint": "7.17.0",
-    "eslint-config-prettier": "7.1.0",
-    "eslint-config-standard": "16.0.2",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "3.3.1",
-    "eslint-plugin-standard": "4.0.0",
-    "husky": "^4.3.8",
+    "apidoc": "0.52.0",
+    "chai": "4.3.6",
+    "husky": "8.0.1",
     "lodash.clonedeep": "4.5.0",
-    "mocha": "^8.4.0",
+    "mocha": "10.0.0",
     "nyc": "15.1.0",
-    "semantic-release": "17.4.2",
-    "sinon": "9.2.2",
-    "standard": "^16.0.4"
+    "semantic-release": "19.0.5",
+    "sinon": "14.0.0",
+    "standard": "17.0.0"
   },
   "release": {
     "publish": [
