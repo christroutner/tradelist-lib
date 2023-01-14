@@ -1,7 +1,7 @@
 {
-  "name": "@chris.troutner/npm-lib-boilerplate",
+  "name": "@chris.troutner/tradelist-lib",
   "version": "1.0.0",
-  "description": "A boilerplate for creating an npm library with Semantic Release, linting, and tests.",
+  "description": "A JS library used by localtradelist.com and globaltradelist.com",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -11,26 +11,13 @@
     "docs": "./node_modules/.bin/apidoc -i src/ -o docs",
     "coverage:report": "nyc --reporter=html mocha test/unit/ --exit"
   },
-  "keywords": [
-    "bitcoin",
-    "bitcoin cash",
-    "wallet",
-    "javascript",
-    "cryptocurrency",
-    "react",
-    "front end",
-    "client",
-    "apidoc",
-    "slp",
-    "tokens"
-  ],
   "author": "Chris Troutner <chris.troutner@gmail.com>",
   "license": "MIT",
   "apidoc": {
-    "title": "npm-lib-boilerplate",
+    "title": "tradelist-lib",
     "url": "localhost:5000"
   },
-  "repository": "christroutner/npm-lib-boilerplate",
+  "repository": "christroutner/tradelist-lib",
   "dependencies": {
     "@psf/bch-js": "6.4.5"
   },
