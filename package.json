@@ -20,9 +20,6 @@
     "url": "localhost:5000"
   },
   "repository": "christroutner/tradelist-lib",
-  "dependencies": {
-    "@psf/bch-js": "6.4.5"
-  },
   "devDependencies": {
     "apidoc": "0.53.0",
     "browserify": "17.0.0",
