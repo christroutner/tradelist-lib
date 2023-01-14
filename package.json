@@ -1,0 +1,61 @@
+{
+  "name": "@chris.troutner/npm-lib-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for creating an npm library with Semantic Release, linting, and tests.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm run lint && TEST=unit nyc mocha test/unit/",
+    "test:integration": "mocha --timeout 25000 test/integration/",
+    "lint": "standard --env mocha --fix",
+    "docs": "./node_modules/.bin/apidoc -i src/ -o docs",
+    "coverage:report": "nyc --reporter=html mocha test/unit/ --exit"
+  },
+  "keywords": [
+    "bitcoin",
+    "bitcoin cash",
+    "wallet",
+    "javascript",
+    "cryptocurrency",
+    "react",
+    "front end",
+    "client",
+    "apidoc",
+    "slp",
+    "tokens"
+  ],
+  "author": "Chris Troutner <chris.troutner@gmail.com>",
+  "license": "MIT",
+  "apidoc": {
+    "title": "npm-lib-boilerplate",
+    "url": "localhost:5000"
+  },
+  "repository": "christroutner/npm-lib-boilerplate",
+  "dependencies": {
+    "@psf/bch-js": "6.4.5"
+  },
+  "devDependencies": {
+    "apidoc": "0.53.0",
+    "chai": "4.3.6",
+    "husky": "8.0.1",
+    "lodash.clonedeep": "4.5.0",
+    "mocha": "10.0.0",
+    "nyc": "15.1.0",
+    "semantic-release": "19.0.5",
+    "sinon": "14.0.1",
+    "standard": "17.0.0"
+  },
+  "release": {
+    "publish": [
+      {
+        "path": "@semantic-release/npm",
+        "npmPublish": true
+      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
