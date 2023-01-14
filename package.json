@@ -57,5 +57,8 @@
         "default": "./index.js"
       }
     }
+  },
+  "dependencies": {
+    "p2wdb": "2.2.10"
   }
 }
