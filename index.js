@@ -4,6 +4,7 @@
 
 // Local libraries
 const Claim = require('./lib/claim')
+const Util = require('./lib/util')
 
 class TradelistLib {
   constructor (localConfig = {}) {
@@ -15,6 +16,7 @@ class TradelistLib {
 
     // Encapsulate dependencies
     this.claim = new Claim(localConfig)
+    this.util = new Util(localConfig)
   }
 }
 
