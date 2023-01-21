@@ -1,6 +1,6 @@
 {
   "name": "@chris.troutner/tradelist-lib",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A JS library used by localtradelist.com and globaltradelist.com",
   "main": "index.js",
   "module": "./dist/tradelist-lib.min.js",
