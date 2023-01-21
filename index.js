@@ -1,26 +1,23 @@
 /*
-  An npm JavaScript library for front end web apps. Implements a minimal
-  Bitcoin Cash wallet.
+  A support library for localtradelist.com
 */
 
-/* eslint-disable no-async-promise-executor */
-
-'use strict'
-
-const BCHJS = require('@psf/bch-js')
-
+// Local libraries
+const Claim = require('./lib/claim')
 const Util = require('./lib/util')
-const util = new Util()
 
-let _this // local global for 'this'.
+class TradelistLib {
+  constructor (localConfig = {}) {
+    // Dependency Injection
+    this.wallet = localConfig.wallet
+    if (!this.wallet) {
+      throw new Error('Must inject instance of minimal-slp-wallet when instantiating tradelist-lib')
+    }
 
-class BoilplateLib {
-  constructor () {
-    _this = this
-
-    _this.bchjs = new BCHJS()
-    _this.util = util
+    // Encapsulate dependencies
+    this.claim = new Claim(localConfig)
+    this.util = new Util(localConfig)
   }
 }
 
-module.exports = BoilplateLib
+module.exports = TradelistLib
